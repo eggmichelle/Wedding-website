@@ -20,4 +20,117 @@
         <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/photography.html">Photography</a>
         <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/decor.html">Guests</a>
     </nav>
+
+    <header id="header-image">
+        <h1>Hair & Makeup</h1>
+    </header>
+
+    <section>
+        <h3>Hair</h3>
+        <div class="category" id="hair-section">
+            <!-- Dummy images with placeholder links for hair -->
+            <img src="images/hair/hair1.jpg" alt="Hair Style 1">
+            <img src="images/hair/hair2.jpg" alt="Hair Style 2">
+            <!-- Add more hair images as needed -->
+        </div>
+
+        <h3>Makeup</h3>
+        <div class="category" id="makeup-section">
+            <!-- Dummy images with placeholder links for makeup -->
+            <img src="images/makeup/makeup1.jpg" alt="Makeup Look 1">
+            <img src="images/makeup/makeup2.jpg" alt="Makeup Look 2">
+            <!-- Add more makeup images as needed -->
+        </div>
+
+        <h3>Henna</h3>
+        <div class="category" id="henna-section">
+            <!-- Dummy images with placeholder links for henna -->
+            <img src="images/henna/henna1.jpg" alt="Henna Design 1">
+            <img src="images/henna/henna2.jpg" alt="Henna Design 2">
+            <!-- Add more henna images as needed -->
+        </div>
+    </section>
+
+    <div>
+        <h3>Suggested Service Providers</h3>
+
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Price Range</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Hair</td>
+                <td>Stylist 1</td>
+                <td><img src="images/hair/stylist1.jpg" alt="Stylist 1" onclick="openPopup({
+                        info: 'Information about Stylist 1',
+                        price: '$100 - $150',
+                        link: 'https://example.com/stylist1'
+                    })"></td>
+                <td>$100 - $150</td>
+                <td><a href="https://example.com/stylist1" target="_blank">Visit Stylist 1</a></td>
+            </tr>
+            <tr>
+                <td>Makeup</td>
+                <td>Makeup Artist 1</td>
+                <td><img src="images/makeup/makeup1.jpg" alt="Makeup Artist 1" onclick="openPopup({
+                        info: 'Information about Makeup Artist 1',
+                        price: '$150 - $200',
+                        link: 'https://example.com/makeup1'
+                    })"></td>
+                <td>$150 - $200</td>
+                <td><a href="https://example.com/makeup1" target="_blank">Visit Makeup Artist 1</a></td>
+            </tr>
+            <tr>
+                <td>Henna</td>
+                <td>Henna Artist 1</td>
+                <td><img src="images/henna/henna1.jpg" alt="Henna Artist 1" onclick="openPopup({
+                        info: 'Information about Henna Artist 1',
+                        price: '$50 - $80',
+                        link: 'https://example.com/henna1'
+                    })"></td>
+                <td>$50 - $80</td>
+                <td><a href="https://example.com/henna1" target="_blank">Visit Henna Artist 1</a></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+        <img id="popupImage" src="" alt="Popup Image">
+        <div class="popup-content">
+            <h4 id="infoTitle">Service Provider Information</h4>
+            <p id="infoText">This is some information about the service provider.</p>
+            <p><strong>Price:</strong> <span id="infoPrice"></span></p>
+            <p><strong>Link:</strong> <a id="infoLink" href="#" target="_blank">Visit service provider</a></p>
+        </div>
+    </div>
+
+    <script>
+        function openPopup(data) {
+            document.getElementById('popupImage').src = data.imageSrc;
+            document.getElementById('infoTitle').innerText = "Service Provider Information";
+            document.getElementById('infoText').innerHTML = `
+                <p>${data.info}</p>
+            `;
+            document.getElementById('infoPrice').innerText = data.price;
+            document.getElementById('infoLink').href = data.link;
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
+
+
 </body>
