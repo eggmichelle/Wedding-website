@@ -20,4 +20,76 @@
         <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/photography.html">Photography</a>
         <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/decor.html">Guests</a>
     </nav>
+
+
+    <section>
+        <h3>Flowers</h3>
+        <div class="category" id="flowers">
+            <img src="images/decor/flower1.png" onclick="openPopup({ 
+                imageSrc: 'images/decor/flower1.png', 
+                info: 'Information about Flower 1', 
+                price: '$550', 
+                storeLink: 'https://www.instagram.com/miabellapaper/' 
+            })">
+          <img src="images/decor/flower2.png" onclick="openPopup({ 
+            imageSrc: 'images/decor/flower2.png', 
+            info: 'Information about Flower 2', 
+            price: '$550', 
+            storeLink: 'https://www.instagram.com/miabellapaper/' 
+        })">
+          <img src="images/decor/flower3.png" onclick="openPopup({ 
+            imageSrc: 'images/decor/flower3.png', 
+            info: 'Information about Flower 3', 
+            price: '$550', 
+            storeLink: 'https://www.instagram.com/miabellapaper/' 
+        })">
+        </div>
+ 
+ 
+        <h2>Lighting</h2>
+        <div class="category">
+            <!-- Add 6 lighting images here -->
+        </div>
+  
+
+    
+        <h2>Other</h2>
+        <div class="category">
+            <!-- Add 6 other decor images here -->
+        </div>
+
+
+      <div class="overlay" id="overlay" onclick="closePopup()"></div>
+        <div class="popup" id="popup">
+            <img id="popupImage" src="" alt="Popup Image">
+            <div class="info-panel">
+                <h4 id="infoTitle">Dress Information</h4>
+                <p id="infoText">This is some information about the dress.</p>
+            </div>
+        </div>
+        
+
+
+    <script>
+        function openPopup(data) {
+            document.getElementById('popupImage').src = data.imageSrc;
+            document.getElementById('infoTitle').innerText = "Dress Information";
+            document.getElementById('infoText').innerHTML = `
+                <p>${data.info}</p>
+                <p><strong>Price:</strong> ${data.price}</p>
+                <p><strong>Store:</strong> <a href="${data.storeLink}" target="_blank">Visit store</a></p>
+            `;
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'flex';
+          
+        }
+
+        function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+    
+    
+
 </body>
