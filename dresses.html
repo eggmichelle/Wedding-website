@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Dresses - Our Wedding Planning</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://e1.pxfuel.com/desktop-wallpaper/65/5/desktop-wallpaper-dark-textured-backgrounds-design-patterns-website-psd-dark-gray-background-texture.jpg'); 
+            font-family: 'Arial', sans-serif;
+            color: #000;
+        }
+    
+
+        section {
+            padding: 30px;
+            color: #faf2f2;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .category {
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .category h3 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #fffcfc;
+        }
+
+        .category img {
+            max-width: 100%;
+            height: 300px;
+            object-fit: cover; /* Maintain image aspect ratio */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .category img:hover {
+            transform: scale(1.1);
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            z-index: 1;
+            max-width: 400px; /* Set your preferred maximum width */
+            width: 100%; /* Responsive width */
+            box-sizing: border-box;
+        }
+
+        .popup img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .info-panel {
+            flex-shrink: 0; /* Prevent the info panel from shrinking */
+            margin-left: 20px; /* Adjust the margin as needed */
+            width: 200px; /* Set your preferred width for the info panel */
+            height: 100%;
+            box-sizing: border-box;
+            background-color: hsl(0, 0%, 97%); /* Set your preferred background color */
+            padding: 10px; /* Add padding for better visual appearance */
+            border-radius: 8px; /* Add border-radius for rounded corners */
+            
+                }
+
+        .info-panel h4 {
+            color: #333; /* Adjust text color as needed */
+                }
+
+        .info-panel p {
+            color: #555; /* Adjust text color as needed */
+                }
+
+
+        /* Add more styles as needed for your popup */
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav id="top-navbar">
+        <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/wedding.html">Home</a>
+        <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/venues.html">Venues</a>
+        <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/catering.html">Catering</a>
+        <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/decor.html">Decor</a>
+        <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/music.html">Music</a>
+        <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/bridesmaids.html">Bridesmaids</a>
+        <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/hair-makeup.html">Hair & Makeup</a>
+        <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/culture.html">Culture</a>
+        <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/culture.html">Groom</a>
+        <a href="file:///C:/Users/michelle.mouton/Documents/Bootcamp/Learning%20Code/Wedding%20website/culture.html">Photography</a>
+    </nav>
+
+    <header id="header-image">
+        <h1>Dresses</h1>
+    </header>
+
+    <section>
+        <h3>White Dresses</h3>
+        <div class="category" id="white-dresses">
+            <!-- <img src="images/dresses/whitedress1.png" alt="White Dress 1" onclick="openPopup({ 
+                imageSrc: 'images/dresses/whitedress1.png', 
+                info: 'Information about White Dress 1', 
+                price: '$500', 
+                storeLink: 'https://example.com/store1' 
+            })"> -->
+            <img src="images/dresses/whitedress2.png" alt="White Dress 2" onclick="openPopup({ 
+                imageSrc: 'images/dresses/whitedress2.png', 
+                info: 'Information about White Dress 2', 
+                price: '$550', 
+                storeLink: 'https://sheerbride.com/collection-6/' 
+            })">
+            <img src="images/dresses/whitedress3.png" alt="White Dress 3" onclick="openPopup({ 
+                imageSrc: 'images/dresses/whitedress3.png', 
+                info: 'Information about White Dress 3', 
+                price: '$600', 
+                storeLink: 'https://veilbridal.co.za/product/crystal-julie-vino/' 
+            })">
+            <img src="images/dresses/whitedress4.png" alt="White Dress 4" onclick="openPopup({ 
+                imageSrc: 'images/dresses/whitedress4.png', 
+                info: 'Information about White Dress 4', 
+                price: '$650', 
+                storeLink: 'https://www.whimsicalbridalcapetown.co.za/copy-of-milva' 
+            })">
+            <!-- <img src="images/dresses/whitedress5.png" alt="White Dress 5" onclick="openPopup({ 
+                imageSrc: 'images/dresses/whitedress5.png', 
+                info: 'Information about White Dress 5', 
+                price: '$700', 
+                storeLink: 'REPLACE' 
+            })"> -->
+            <img src="images/dresses/whitedress6.png" alt="White Dress 6" onclick="openPopup({ 
+                imageSrc: 'images/dresses/whitedress6.png', 
+                info: 'Information about White Dress 6', 
+                price: '$750', 
+                storeLink: 'https://veilbridal.co.za/product/pollardi-affectia/' 
+            })">
+        </div>
+        
+
+        <h3>Pastel Dresses</h3>
+        <div class="category" id="pastel-dresses">
+            <img src="images/dresses/pasteldress1.png" alt="Pastel Dress 1" onclick="openPopup({ 
+                imageSrc: 'images/dresses/pasteldress1.png', 
+                info: 'Information about Pastel Dress 1', 
+                price: '$400', 
+                storeLink: 'https://www.fynbosbridal.com/product-page/amahle' 
+            })">
+            <img src="images/dresses/pasteldress2.png" alt="Pastel Dress 2" onclick="openPopup({ 
+                imageSrc: 'images/dresses/pasteldress2.png', 
+                info: 'Information about Pastel Dress 2', 
+                price: '$450', 
+                storeLink: 'https://example.com/store2' 
+            })">
+            <img src="images/dresses/pasteldress3.png" alt="Pastel Dress 3" onclick="openPopup({ 
+                imageSrc: 'images/dresses/pasteldress3.png', 
+                info: 'Information about Pastel Dress 3', 
+                price: '$500', 
+                storeLink: 'https://example.com/store3' 
+            })">
+            <img src="images/dresses/pasteldress4.png" alt="Pastel Dress 4" onclick="openPopup({ 
+                imageSrc: 'images/dresses/pasteldress4.png', 
+                info: 'Information about Pastel Dress 4', 
+                price: '$550', 
+                storeLink: 'https://example.com/store4' 
+            })">
+            <img src="images/dresses/pasteldress5.png" alt="Pastel Dress 5" onclick="openPopup({ 
+                imageSrc: 'images/dresses/pasteldress5.png', 
+                info: 'Information about Pastel Dress 5', 
+                price: '$600', 
+                storeLink: ' https://www.vividresses.co.za/aline-sweetheart-tulle-wedding-gown-pleats-p-8044.html' 
+            })">
+            <img src="images/dresses/pasteldress6.png" alt="Pastel Dress 6" onclick="openPopup({ 
+                imageSrc: 'images/dresses/pasteldress6.png', 
+                info: 'Information about Pastel Dress 6', 
+                price: '$650', 
+                storeLink: 'https://www.etsy.com/dk-en/listing/1421951258/princess-3d-flower-sweet-a-line-tulle?variation0=3328550001' 
+            })">
+        </div>
+
+        <h3>Indian Dresses</h3>
+        <div class="category" id="indian-dresses">
+            <img src="images/dresses/indiandress1.png" alt="Indian Dress 1" onclick="openPopup({ 
+                imageSrc: 'images/dresses/indiandress1.png', 
+                info: 'Information about Indian Dress 1', 
+                price: '$700', 
+                storeLink: 'https://indiancouture.co.za/product/purple-party-wear-heavy-designer-net-lehenga-choli~id.15074' 
+            })">
+            <img src="images/dresses/indiandress2.png" alt="Indian Dress 2" onclick="openPopup({ 
+                imageSrc: 'images/dresses/indiandress2.png', 
+                info: 'Information about Indian Dress 2', 
+                price: '$750', 
+                storeLink: ' https://indiancouture.co.za/product/black-soft-net-embroidered-party-wear-stylish-lehenga-with-contrast-blouse~id.13468' 
+            })">
+            <img src="images/dresses/indiandress3.png" alt="Indian Dress 3" onclick="openPopup({ 
+                imageSrc: 'images/dresses/indiandress3.png', 
+                info: 'Information about Indian Dress 3', 
+                price: '$800', 
+                storeLink: 'https://shringar.co.za/shop/woman/sarees/contemporary-sarees/sari-off-white-net-with-gold-floral-borders-pearl/' 
+            })">
+            <img src="images/dresses/indiandress5.png" alt="Indian Dress 5" onclick="openPopup({ 
+                imageSrc: 'images/dresses/indiandress5.png', 
+                info: 'Information about Indian Dress 4', 
+                price: '$850', 
+                storeLink: 'https://indiancouture.co.za/product/light-steel-blue-net-with-cotton-embroidery-sequins-and-thread-work-wedding-wear-stylish-lehenga-choli~id.13635' 
+            })">
+            <img src="images/dresses/indiandress6.jpg" alt="Indian Dress 6" onclick="openPopup({ 
+                imageSrc: 'images/dresses/indiandress6.jpg', 
+                info: 'Information about Indian Dress 5', 
+                price: '$900', 
+                storeLink: 'https://indiancouture.co.za/product/golden-brown-velvet-handwork-wedding-wear-bridal-lehenga-choli-with-double-dupatta~id.14839' 
+            })">
+            <img src="images/dresses/indiandress7.png" alt="Indian Dress 7" onclick="openPopup({ 
+                imageSrc: 'images/dresses/indiandress7.png', 
+                info: 'Information about Indian Dress 6', 
+                price: '$950', 
+                storeLink: ' https://indiancouture.co.za/product/light-mint-net-with-silk-satin-can-can-wedding-lehenga-choli~id.7939' 
+            })">
+        </div>
+
+     
+        <h3>Unconventional Dresses</h3>
+        <div class="category" id="unconventional-dresses">
+            <img src="images/dresses/unconventionaldress1.png" alt="Weird Dress 1" onclick="openPopup({ 
+                imageSrc: 'images/dresses/unconventionaldress1.png', 
+                info: 'Information about Weird Dress 1', 
+                price: '$500', 
+                storeLink: 'https://example.com/store13' 
+            })">
+            <img src="images/dresses/unconventionaldress2.png" alt="Weird Dress 2" onclick="openPopup({ 
+                imageSrc: 'images/dresses/unconventionaldress2.png', 
+                info: 'Information about Weird Dress 2', 
+                price: '$550', 
+                storeLink: 'https://example.com/store14' 
+            })">
+            <img src="images/dresses/unconventionaldress3.png" alt="Weird Dress 3" onclick="openPopup({ 
+                imageSrc: 'images/dresses/unconventionaldress3.png', 
+                info: 'Information about Weird Dress 3', 
+                price: '$600', 
+                storeLink: 'https://example.com/store15' 
+            })">
+            <img src="images/dresses/unconventionaldress4.png" alt="Weird Dress 4" onclick="openPopup({ 
+                imageSrc: 'images/dresses/unconventionaldress4.png', 
+                info: 'Information about Weird Dress 4', 
+                price: '$650', 
+                storeLink: 'https://example.com/store16' 
+            })">
+            <img src="images/dresses/unconventionaldress5.png" alt="Weird Dress 5" onclick="openPopup({ 
+                imageSrc: 'images/dresses/unconventionaldress5.png', 
+                info: 'Information about Weird Dress 5', 
+                price: '$700', 
+                storeLink: 'https://www.vividresses.co.za/halter-floor-length-organza-traditional-bridal-wear-p-239.html' 
+            })">
+            <img src="images/dresses/unconventionaldress6.png" alt="Weird Dress 6" onclick="openPopup({ 
+                imageSrc: 'images/dresses/unconventionaldress6.png', 
+                info: 'Information about Weird Dress 6', 
+                price: '$750', 
+                storeLink: 'https://sheerbride.com/jomalin/' 
+            })">
+        </div>
+        <div class="overlay" id="overlay" onclick="closePopup()"></div>
+        <div class="popup" id="popup">
+            <img id="popupImage" src="" alt="Popup Image">
+            <div class="info-panel">
+                <h4 id="infoTitle">Dress Information</h4>
+                <p id="infoText">This is some information about the dress.</p>
+            </div>
+        </div>
+        
+
+
+    <script>
+        function openPopup(data) {
+            document.getElementById('popupImage').src = data.imageSrc;
+            document.getElementById('infoTitle').innerText = "Dress Information";
+            document.getElementById('infoText').innerHTML = `
+                <p>${data.info}</p>
+                <p><strong>Price:</strong> ${data.price}</p>
+                <p><strong>Store:</strong> <a href="${data.storeLink}" target="_blank">Visit store</a></p>
+            `;
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'flex';
+          
+        }
+
+        function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
+
+        <div>
+            <h3>Links to Shops</h3>
+            <ul class = "custom-list">
+                <li><a href="https://sheerbride.com/sale-2/" target="_blank"> Sheer Bride</a></li>
+                <li><a href="https://www.whimsicalbridalcapetown.co.za/home" target="_blank"> Whimsical Bride</a></li>
+                <li><a href="https://theweddingboutique.co.za/" target="_blank"> The Wedding Boutique</a></li>
+                <li><a href="https://www.fynbosbridal.com/" target="_blank"> Fynbos Bridal</a></li>
+                <li><a href="https://indiancouture.co.za/" target="_blank"> Indian Couture</a></li>
+                <li><a href="https://shringar.co.za/" target="_blank"> Shringar</a></li>
+                <li><a href="https://veilbridal.co.za/product/crystal-julie-vino/" target="_blank"> Veil Bridal </a></li>
+                <li><a href="https://clairepettibone.com/collections/all-wedding-dresses" target="_blank"> Claire Pettibone </a></li>
+                <li><a href="https://www.kalkifashion.com/bridal.html?p=4" target="_blank"> Kalki Fashion </a></li>
+                <li><a href="https://www.vividresses.co.za/wedding-dresses-c-1/" target="_blank"> Vivi Dresses </a></li>
+           
+                
+                
+                
+               
+                
+                
+            </ul>
+        
+        </div>
+    </section>
+
+
+    <div class="modal" id="imageModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Modal Image">
+        <!-- Add additional information or description here -->
+    </div>
+
+</body>
+</html>
