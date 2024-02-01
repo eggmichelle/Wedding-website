@@ -5,55 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title> Catering - Our Wedding Planning</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            color: #000;
-        }
-
-        header {
-            text-align: center;
-            padding: 50px;
-            background-color: #fff;
-        }
-
-        section {
-            padding: 30px;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        .cake,
-        .cocktail,
-        .menu {
-            margin-top: 20px;
-        }
-
-        .cake img,
-        .cocktail img,
-        .menu img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .cake img:hover,
-        .cocktail img:hover,
-        .menu img:hover {
-            transform: scale(1.1);
-        }
-
-        .details {
-            text-align: center;
-        }
-    </style>
 </head>
 
 <nav id="top-navbar">
@@ -70,83 +21,49 @@
 </nav>
 
 <body>
-    <header>
+    <header id="header-image">
         <h1>Catering</h1>
     </header>
 
     <section>
-        <div class="cake">
-            <h2>The Cake</h2>
-
-            <div class="option">
-                <img src="cake1.jpg" alt="Cake Option 1">
-                <div class="details">
-                    <h3>Bakery Name 1</h3>
-                    <p><strong>Contact:</strong> Phone: xxx-xxx-xxxx, Email: info@bakery1.com</p>
-                    <p><strong>Estimated Price:</strong> $$$</p>
-                    <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget quam eu lectus consequat condimentum.</p>
-                </div>
-            </div>
-
-            <div class="option">
-                <img src="cake2.jpg" alt="Cake Option 2">
-                <div class="details">
-                    <h3>Bakery Name 2</h3>
-                    <p><strong>Contact:</strong> Phone: xxx-xxx-xxxx, Email: info@bakery2.com</p>
-                    <p><strong>Estimated Price:</strong> $$$</p>
-                    <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget quam eu lectus consequat condimentum.</p>
-                </div>
-            </div>
-
-            <div class="option">
-                <img src="cake3.jpg" alt="Cake Option 3">
-                <div class="details">
-                    <h3>Bakery Name 3</h3>
-                    <p><strong>Contact:</strong> Phone: xxx-xxx-xxxx, Email: info@bakery3.com</p>
-                    <p><strong>Estimated Price:</strong> $$$</p>
-                    <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget quam eu lectus consequat condimentum.</p>
-                </div>
-            </div>
-
-            <div class="option">
-                <img src="cake4.jpg" alt="Cake Option 4">
-                <div class="details">
-                    <h3>Bakery Name 4</h3>
-                    <p><strong>Contact:</strong> Phone: xxx-xxx-xxxx, Email: info@bakery4.com</p>
-                    <p><strong>Estimated Price:</strong> $$$</p>
-                    <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget quam eu lectus consequat condimentum.</p>
-                </div>
-            </div>
+        <h3>Cake Inspiration</h3>
+        <div class="category" id="cake-ideas">
+            <img src="images/cakes/cake1.jpg" alt="Cake Idea 1">
+            <img src="images/cakes/cake2.jpg" alt="Cake Idea 2">
+            <img src="images/cakes/cake3.jpg" alt="Cake Idea 3">
+            <img src="images/cakes/cake4.jpg" alt="Cake Idea 4">
+            <img src="images/cakes/cake5.jpg" alt="Cake Idea 5">
+            <img src="images/cakes/cake6.jpg" alt="Cake Idea 6">
+            <!-- Add more cake ideas as needed -->
         </div>
 
-        <div class="cocktail">
-            <h2>Custom Cocktails</h2>
+        <h3>Menus</h3>
+        <div class="category" id="menus">
+            <div class="menu">
+                <h4>Menu 1</h4>
+                <div class="menu-options">
+                    <p>Appetizer 1</p>
+                    <p>Main Course 1</p>
+                    <p>Dessert 1</p>
+                </div>
+           
 
-            <div class="option">
-                <h3>Cocktail Title 1</h3>
-                <img src="cocktail1.jpg" alt="Cocktail 1">
-                <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget quam eu lectus consequat condimentum.</p>
+
+        <h3>Caterers</h3>
+        <div class="category" id="caterers">
+            <div class="caterer">
+                <img src="images/catering/caterer1.jpg" alt="Caterer 1">
+                <div class="caterer-info">
+                    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Price Point: $$$$</p>
+                    <p><a href="https://caterer1.com" target="_blank">Visit Website</a></p>
+                </div>
             </div>
 
-            <div class="option">
-                <h3>Cocktail Title 2</h3>
-                <img src="cocktail2.jpg" alt="Cocktail 2">
-                <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget quam eu lectus consequat condimentum.</p>
-            </div>
+            <!-- Add more caterers with info as needed -->
 
-            <div class="option">
-                <h3>Cocktail Title 3</h3>
-                <img src="cocktail3.jpg" alt="Cocktail 3">
-                <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget quam eu lectus consequat condimentum.</p>
-            </div>
         </div>
+    </section>
 
-        <div class="menu">
-            <h2>Menu Ideas</h2>
-
-            <div class="option">
-                <h3>Menu 1</h3>
-                <img src="menu1.jpg" alt="Menu 1">
-                <p><strong>Mains:</strong> Dish 1, Dish 2, Dish 3 (including vegan option)</p>
-                <p><strong>Appetizers:</strong> Appetizer 1, Appetizer 2, Appetizer 3 (including vegan option)</p>
-                <p><strong>Desserts:</strong
+</body>
+</html>
