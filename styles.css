@@ -147,7 +147,7 @@ ul.custom-list li:hover {
 
 
 .category img {
-    max-width: 100%;
+    max-width: 25%;
     height: 300px;
     object-fit: cover; /* Maintain image aspect ratio */
     border: 1px solid #ddd;
@@ -160,6 +160,7 @@ ul.custom-list li:hover {
 .category img:hover {
     transform: scale(1.1);
 }
+
 
 .popup {
     display: none;
